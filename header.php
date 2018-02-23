@@ -42,6 +42,8 @@
 
 			  		<div id="mySidenav" class="sidenav">
 				  		
+				  		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				  		
 				  		<?php 
 					  		
 					  		wp_nav_menu( array(
