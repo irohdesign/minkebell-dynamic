@@ -16,6 +16,11 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	
+	<link href="<?php bloginfo('stylesheet_directory');?>/assets/css/bootstrap.min.css" rel="stylesheet">
+	
+	<link href="<?php bloginfo('stylesheet_directory');?>/assets/css/font-awesome.min.css" rel="stylesheet">
+	
 
 	<?php wp_head(); ?>
 </head>
@@ -29,12 +34,12 @@
 		<nav class="navbar container">
 		  	<a class="site-brand" href="index.html">Minkebell</a> 
 		  		
-			  	<button class="pull-right menu-toggle" onclick="openNav()">
+			  	<button class="pull-right" onclick="openNav()">
 			  			<div class="burger"></div>
 			  			<div class="burger"></div>
 			  			<div class="burger"></div>
 			  	</button>
-			  		
+
 			  		<div id="mySidenav" class="sidenav">
 				  		
 				  		<?php 
