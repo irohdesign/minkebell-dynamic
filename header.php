@@ -29,7 +29,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'audiophile' ); ?></a>
 
-	<header>
+	<header id="site-header">
 		
 		<nav class="navbar container">
 		  	<a class="site-brand" href="index.html">Minkebell</a> 
@@ -47,7 +47,8 @@
 				  		<?php 
 					  		
 					  		wp_nav_menu( array(
-						  		'theme_location'	=> 'primary'
+						  		'theme_location'	=> 'primary',
+						  		'menu_class'	=> 'flex-wrapper'
 					  		));
 					  		
 				  		?>

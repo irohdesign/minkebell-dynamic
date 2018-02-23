@@ -364,6 +364,11 @@ object {
 	theme-specific styles
 ----------------------------------------------------------*/
 
+.logged-in #page {
+	position: relative;
+	top: 0px;
+	background: red;
+}
 
 /**********************************************************
 	fonts
@@ -482,7 +487,7 @@ a:hover {
 	color: black;
 }
 
-header {
+#site-header {
 	margin-bottom: -20px;
 }
 
@@ -521,6 +526,7 @@ header button {
     height: 100%; 
     width: 0px;
     max-width: 220px;
+    display: flex;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -532,13 +538,14 @@ header button {
 }
 
 .closebtn {
-	padding-top: 10px;
+	margin-top: 20px;
 }
 
-.flex-wrapper {
+.flex-wrapper ul {
 	display: flex;
+	list-style: none;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     position: absolute;
     height: 80%;
     width: 100%;
@@ -548,6 +555,7 @@ header button {
 
 .sidenav a {
     text-decoration: none;
+    list-style: none;
     font-size: 25px;
     color: #aaa;
     transition: 0.3s;
