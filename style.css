@@ -373,6 +373,8 @@ object {
 	top: 15px;
 }
 
+.category .page-header {display:none;}
+
 /**********************************************************
 	fonts
 **********************************************************/
@@ -677,6 +679,7 @@ header button {
 #index-feat iframe,
 #staff-feat iframe,
 #indiv-post iframe {
+	width: 100%;
 	max-width: 1000px;
 	display: block;
 	margin: 35px auto 5px;
