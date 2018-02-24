@@ -13,6 +13,42 @@
 
 <?php wp_footer(); ?>
 
+<footer>
+			<section id="foot-social">
+				<h3>Share the music</h3>
+				
+				<div class="social-buttons">
+					<a href=""><div class="social-bubble twitter">
+						<i class="fa fa-twitter"></i>
+					</div></a>
+					
+					<a href=""><div class="social-bubble facebook">
+						<i class="fa fa-facebook"></i>
+					</div></a>
+					
+					<a href=""><div class="social-bubble tumblr">
+						<i class="fa fa-tumblr"></i>
+					</div></a>
+					
+					<a href=""><div class="social-bubble reddit">
+						<i class="fa fa-reddit"></i>
+					</div></a>
+				</div>
+			</section>
+			<section id="foot-nav">
+				<nav>
+					<a href="">Home</a>
+					<a href="">Contact</a>
+					<a href="">About</a>
+					<a href="">Fish</a>
+				</nav>
+				
+				<h4>Minkebell &copy; 2018</h4>
+				
+			</section>
+			
+		</footer><!-- footer end -->
+
 		
 	<!-- Bootstrap core JavaScript
     ================================================== -->
