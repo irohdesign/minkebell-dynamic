@@ -32,7 +32,7 @@
 	<header id="site-header">
 		
 		<nav class="navbar container">
-		  	<a class="site-brand" href="index.html">Minkebell</a> 
+		  	<a class="site-brand" href="<?php echo get_home_url();?>">Minkebell</a> 
 		  		
 			  	<button class="pull-right" onclick="openNav()">
 			  			<div class="burger"></div>
