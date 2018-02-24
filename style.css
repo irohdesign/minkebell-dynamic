@@ -367,7 +367,10 @@ object {
 .logged-in #page {
 	position: relative;
 	top: 0px;
-	background: red;
+}
+
+.logged-in .sidenav {
+	top: 15px;
 }
 
 /**********************************************************
