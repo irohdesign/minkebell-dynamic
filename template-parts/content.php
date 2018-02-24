@@ -8,30 +8,29 @@
  */
 
 ?>
+									
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<section class="page-wrapper">
+	
+	<section id="indiv-post" class="index-inner">
+
+		<a href=""><div class="feat-img" style="background-image:; background-size: cover;"></div>
+		</a>
+
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h2 class="entry-title">', '</h2>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-				audiophile_posted_on();
-				audiophile_posted_by();
-			?>
-		</div><!-- .entry-meta -->
+		
 		<?php
 		endif; ?>
-	</header><!-- .entry-header -->
 
-	<?php audiophile_post_thumbnail(); ?>
 
-	<div class="entry-content">
 		<?php
 			the_content( sprintf(
 				wp_kses(
@@ -51,6 +50,10 @@
 				'after'  => '</div>',
 			) );
 		?>
+		
+		</section><!-- end of indiv-post section -->
+		
+</section><!-- end of page-wrapper -->
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
