@@ -3,9 +3,14 @@
 	Template Name: Home Page		
 */
 
-get_header(); ?>
+//Custom Fields
+$feat_type				= get_post_meta( 8, 'feat_type', true );
+$feat_name				= get_post_meta( 8, 'feat_name', true );
+$playlist_modal_url		= get_post_meta( 8, 'playlist_modal_url', true);
 
+get_header(); ?>
 		
+
 <section id="hero" style="background: url(<?php bloginfo('stylesheet_directory');?>/assets/img/desk-turn.jpeg);
 	background-size: cover;
 	background-attachment: fixed;
@@ -22,19 +27,16 @@ get_header(); ?>
 				
 				<section id="index-feat" class="index-inner">
 					
-					<h1>Featured Artist</h1><!-- make artist, album, concert or venue dynamic, so it can be more flexible in the long run -->
+					<h1>Featured <?php echo $feat_type; ?></h1><!-- make artist, album, concert or venue dynamic, so it can be more flexible in the long run -->
 					
 					<a href=""><div class="feat-img" style="background-image: url('assets/img/chancetherapper.jpeg'); background-size: cover;"></div>
 					
-					<h2>Chance the Rapper</h2><!-- artist title --></a>
-					<p>This highly anticipated mixtape from Chance the Rapper definitely lives up to the standard set by Acid Rap and other previous releases (I only mention Acid Rap because it’s the favorite that I personally held this album up to).</p>
-
-					<p>Released May 13, 2016, it was the first purely streaming album to chart on the Billboard 200 and the first purely streaming album to win a Grammy (Best Rap Album 2017). Chance the Rapper marries gospel with rap, with stellar producing and mixing by his group The Social Experiment.</p>
-					
-					<p>This album is heavily influenced by his love for his daughter, and, fun fact: Chance’s loving expression on the cover, painted by Brandon Breaux, was captured while he was looking affectionately down at his daughter.</p><!-- description text -->
+					<h2><?php echo $feat_name; ?></h2><!-- artist title --></a>
+					<!-- description text -->
 					
 					<!-- make sure to leave work limit on the description, because it looks weird with too much text. maybe a limit of 150 words -->					
-					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/266129708&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
+					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="<?php echo $soundcloud_url;?>"></iframe>
+					
 					
 				</section><!-- end of featured section -->
 				
@@ -108,7 +110,7 @@ get_header(); ?>
 				</div><!-- modal-header end -->
 				
 				<div class="modal-body">
-					<iframe src="https://tools.applemusic.com/embed/v1/playlist/pl.abe8ba42278f4ef490e3a9fc5ec8e8c5?country=us" frameborder="0"></iframe>
+					<iframe src="<?php echo $playlist_modal_url;?>" frameborder="0"></iframe>
 				</div><!-- modal-body end -->
 				
 				<div class="modal-footer">
