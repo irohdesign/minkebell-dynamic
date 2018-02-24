@@ -7,6 +7,8 @@
  * @package audiophile
  */
 
+$img_url		= get_post_meta( get_the_ID(), 'img_url', true);
+
 ?>
 									
 
@@ -14,7 +16,7 @@
 	
 	<section id="indiv-post" class="index-inner">
 
-		<a href=""><div class="feat-img" style="background-image:; background-size: cover;"></div>
+		<a href=""><div class="feat-img" style="background-image:url('<?php echo $img_url; php?>'); background-size: cover;"></div>
 		</a>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
