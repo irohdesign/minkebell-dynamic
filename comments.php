@@ -20,6 +20,43 @@ if ( post_password_required() ) {
 }
 ?>
 
+<section id="comments" class="index-inner">
+				<div class="comment-wrapper">
+					
+					<div class="indiv-comment">
+						<div class="comment-body">
+						<p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the.</p>
+						</div><!-- comment-body end -->
+						
+						<div class="comment-info">
+							<h4>Commenter</h4><h4>Comment Date</h4>
+						</div><!-- comment-info end -->
+					</div><!-- indiv-comment end -->
+					
+					<div class="indiv-comment">
+						<div class="comment-body">
+						<p>"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the.</p>
+						</div><!-- comment-body end -->
+						
+						<div class="comment-info">
+							<h4>Commenter</h4><h4>Comment Date</h4>
+						</div><!-- comment-info end -->
+					</div><!-- indiv-comment end -->
+					
+					
+					<form>
+						<input type="text" placeholder="Your name">
+						<input type="email" placeholder="Your email">
+						
+						<textarea placeholder="Your comment"></textarea>
+						
+						<input type="submit" value="Submit">
+					</form>
+				</div><!-- comment-wrapper end -->
+			</section><!-- comments end -->
+			
+		</section><!-- page-wrapper end -->
+
 <div id="comments" class="comments-area">
 
 	<?php
