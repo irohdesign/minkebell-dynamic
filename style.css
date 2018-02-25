@@ -439,7 +439,6 @@ a {
 
 a:hover {
 	color: #2a0c42;
-	text-decoration: line-through;
 	cursor: hand;
 }
 
@@ -502,7 +501,7 @@ a:hover {
 }
 
 .site-brand:hover {
-	text-decoration: line-through;
+	text-decoration: none;
 	color: #51355a;
 }
 
@@ -641,7 +640,6 @@ header button {
 	width: 88%;
 	max-width: 1000px;
 }
-
 /**********************************************************
 	page-top
 **********************************************************/
@@ -656,10 +654,10 @@ header button {
 
 .page-top h1 {
 	display: table-cell;
-	padding: 40px 0px;
+	padding: 50px 0px;
 	vertical-align: middle;
 	font-family: Permanent Marker;
-	font-size: 50px;
+	font-size: 80px;
 	letter-spacing: 3px;
 }
 
@@ -716,9 +714,8 @@ header button {
 }
 
 #index-feat:hover h2,
-#staff-feat:hover h2,
-#indiv-post:hover h2 {
-	text-decoration: line-through;
+#staff-feat:hover h2 {
+	text-decoration: none;
 }
 
 #index-feat:hover a,
@@ -862,7 +859,7 @@ textarea::placeholder {
 }
 
 .new-list a:hover h3 {
-	text-decoration: line-through;
+	text-decoration: none;
 }
 
 .new-list .row {
@@ -1098,7 +1095,7 @@ footer {
 }
 
 .col-sm-6:hover h3 {
-	text-decoration: line-through;
+	text-decoration: none;
 }
 
 .excerpt-half-sum h3 {
