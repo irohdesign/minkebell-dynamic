@@ -407,16 +407,43 @@ object {
 */
 
 /**********************************************************
-	global
+	fonts
 **********************************************************/
-h3, h4, h5, h6 {
+
+@font-face {
 	font-family: Bebas Neue;
-	text-align: center;
+	src: url(assets/fonts/Bebas Neue/BebasNeue-Regular.otf);
 }
 
+@font-face {
+	font-family: Hanken;
+	src: url(assets/fonts/Hanken/Hanken-Book.ttf);
+}
+
+@font-face {
+	font-family: Permanent Marker;
+	src: url(assets/fonts/Permanent Marker/PermanentMarker-Regular.ttf);
+}
+
+/**********************************************************
+	color palette
+**********************************************************/
+
+/*
+	#721817 - prune
+	#3E92CC - celestial blue
+	#51355A - pineapple
+	#2A0C4E - russian violet
+	#2A628F - lapis lazuli
+*/
+
+/**********************************************************
+	global
+**********************************************************/
 
 .container {
-	width: 95%;
+	margin: auto;
+	display: block;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -437,53 +464,11 @@ a {
 	color: #721817;
 }
 
-a:hover {
-	color: #2a0c42;
-	cursor: hand;
-}
-
-.col-sm-4 {
+.row {
+	margin: 0px;
 	padding: 0px;
 }
 
-.col-sm-4:nth-child(1) {
-	padding-right: 10px;
-}
-
-.col-sm-6:nth-child(2) {
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-.col-sm-4:nth-child(3) {
-	padding-left: 10px;
-}
-
-.col-md-3:nth-child(3) {
-	padding-right: 5px;
-}
-
-.col-md-3:nth-child(4) {
-	padding-left: 5px;
-	padding-right: 5px;
-}
-
-
-.col-sm-6 {
-	padding: 10px;
-}
-
-.col-sm-6:nth-child(1) {
-	padding-right: 10px;
-}
-
-.col-sm-6:nth-child(2) {
-	padding-left: 10px;
-}
-
-.row a {
-	color: black;
-}
 
 /**********************************************************
 	nav
@@ -496,30 +481,35 @@ a:hover {
 	color: black;
 }
 
-#site-header {
+header {
 	margin-bottom: -20px;
 }
 
 .site-brand:hover {
-	text-decoration: none;
+	text-decoration: line-through;
 	color: #51355a;
 }
 
+header nav {
+	position: relative;
+}
+
 .navbar {
-	padding: 5px 0px 2.5px 0px;
+	padding: 10px 0px 5px;
 	max-width: 1450px;
 	display: block;
+	background: white;
 	margin: inherit auto;
 }
 
-button .burger {
+.burger {
 	height: 4px;
 	background-color: black;
 	width: 25px;
 	border-radius: 1.7px;
 	margin: 4px;
 	position: relative;
-	top: -10px;
+	top: -15px;
 	transition: 0.5s;
 }
 
@@ -528,14 +518,12 @@ header button {
 	border: none;
 	position: relative;
 	top: 23px;
-	z-index: 0;
 }
 
 .sidenav {
     height: 100%; 
-    width: 0px;
-    max-width: 220px;
-    display: flex;
+	width: 0px;
+	max-width: 400px;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -544,27 +532,17 @@ header button {
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s; 
+    display: flex;
+	flex-direction: column;
+	align-content: space-between;
 }
 
 .closebtn {
-	margin-top: 20px;
-}
-
-.flex-wrapper ul {
-	display: flex;
-	list-style: none;
-    flex-direction: column;
-    justify-content: space-around;
-    position: absolute;
-    height: 80%;
-    width: 100%;
-    padding: 40px 20px 10px;
-    text-align: right;  
+	padding-top: 10px;
 }
 
 .sidenav a {
     text-decoration: none;
-    list-style: none;
     font-size: 25px;
     color: #aaa;
     transition: 0.3s;
@@ -572,8 +550,38 @@ header button {
     font-size: 23px;
 }
 
+.top-links {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	padding-right: 20px;
+	align-content: space-between;
+	height: 100%;
+}
+
+.top-links a {
+	padding: 5px 0px;
+}
+
+.bottom-links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 88%;
+	margin: auto;
+	border-top: solid #ddd 1px;
+	border-bottom: solid #ddd 1px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.bottom-links a {
+	color: black;
+	font-size: 16px;
+}
+
 .sidenav a:hover {
-    color: black;
+    color: red;
 }
 
 .sidenav .closebtn {
@@ -640,6 +648,7 @@ header button {
 	width: 88%;
 	max-width: 1000px;
 }
+
 /**********************************************************
 	page-top
 **********************************************************/
@@ -654,16 +663,21 @@ header button {
 
 .page-top h1 {
 	display: table-cell;
-	padding: 50px 0px;
+	padding: 40px 0px;
 	vertical-align: middle;
 	font-family: Permanent Marker;
-	font-size: 80px;
+	font-size: 50px;
 	letter-spacing: 3px;
 }
 
 /**********************************************************
 	index-feat, staff-feat, indiv-post
 **********************************************************/
+
+.blog-inner {
+	background: white;
+	padding: 0px;
+}
 
 #index-feat h1 {
 	text-align: center;
@@ -682,14 +696,13 @@ header button {
 #index-feat iframe,
 #staff-feat iframe,
 #indiv-post iframe {
-	width: 100%;
 	max-width: 1000px;
 	display: block;
 	margin: 35px auto 5px;
 }
 
 .feat-img {
-	height: 380px;
+	height: 300px;
 	max-width: 1000px;
 	margin: auto; 
 }
@@ -714,14 +727,88 @@ header button {
 }
 
 #index-feat:hover h2,
-#staff-feat:hover h2 {
-	text-decoration: none;
+#staff-feat:hover h2,
+#indiv-post:hover h2 {
+	text-decoration: line-through;
 }
 
 #index-feat:hover a,
 #staff-feat:hover a,
 #indiv-post:hover a {
 	text-decoration: none;
+}
+
+#single-post-page {
+	max-width: 1250px;
+	margin: auto;
+}
+
+/**********************************************************
+	#indiv-post #sidebar
+**********************************************************/
+
+#sidebar {
+	margin: auto;
+	display: block;
+	background: white;
+}
+
+#sidebar:hover a {
+	text-decoration: none;
+}
+
+#sidebar h1 {
+	text-align: center;
+	margin: 30px auto 0px;
+	font-family: Bebas Neue;
+	font-size: 50px;
+	letter-spacing: 2.5px;
+}
+
+#sidebar h4 {
+	margin-bottom: 5px;
+	font-family: Bebas Neue;
+	font-size: 28px;
+}
+
+#sidebar h5 {
+	display: block;
+	color: black;
+	text-align: left;
+}
+
+#sidebar .col-md-12 {
+	padding: 15px 10px;
+}
+
+.sq-prev {
+	height: 170px;
+	margin-bottom: 10px;
+	filter: grayscale() contrast(1.2);
+}
+
+#sidebar .col-md-12:hover .sq-prev {
+	filter: contrast(1.2);
+}
+
+#sidebar #side-1 {
+	background: url('assets/img/knobs.jpeg');
+	background-size: cover;
+}
+
+#sidebar #side-2 {
+	background: url('assets/img/paintingthemoon.jpg');
+	background-size: cover;
+}
+
+#sidebar #side-3 {
+	background: url('assets/img/phone.jpg');
+	background-size: cover;
+}
+
+#sidebar #side-4 {
+	background: url('assets/img/milodoldrums.jpg');
+	background-size: cover;
 }
 
 /**********************************************************
@@ -731,6 +818,7 @@ header button {
 .comment-wrapper {
 	width: 88%;
 	margin: 10px auto;
+	padding: 10px 0px 35px;
 }
 
 .comment-info h4 {
@@ -753,38 +841,38 @@ header button {
 	margin: 40px auto;
 }
 
-.comment-wrapper form {
+form {
 	width: 100%;
 	margin: auto;
 }
 
-.comment-wrapper input[type=text],
-.comment-wrapper input[type=email],
-.comment-wrapper input[type=submit],
-.comment-wrapper textarea {
+input[type=text],
+input[type=email],
+input[type=submit],
+textarea {
 	border-radius: 5px;
 	border: solid 1px #aaa;
 	padding: 5px 0px;
 }
 
-.comment-wrapper input[type=text] {
+input[type=text] {
 	width: 30%;
 	display: inline-block;
 }
 
-.comment-wrapper input[type=email] {
+input[type=email] {
 	width: 69%;
 	display: inline-block;
 	float: right;
 }
 
-.comment-wrapper textarea {
+textarea {
 	width: 100%;
 	height: 150px;
 	margin-top: 10px;
 }
 
-.comment-wrapper input[type="submit"] {
+input[type="submit"] {
 	width: 100%;
 	font-size: 16px;
 	margin-top: 10px;
@@ -859,7 +947,7 @@ textarea::placeholder {
 }
 
 .new-list a:hover h3 {
-	text-decoration: none;
+	text-decoration: line-through;
 }
 
 .new-list .row {
@@ -886,7 +974,6 @@ footer {
 
 #foot-social h3 {
 	margin: 5px auto 20px;
-	font-family: Hanken;
 }
 
 #foot-social a {
@@ -1095,7 +1182,7 @@ footer {
 }
 
 .col-sm-6:hover h3 {
-	text-decoration: none;
+	text-decoration: line-through;
 }
 
 .excerpt-half-sum h3 {
@@ -1274,11 +1361,11 @@ footer {
 		background: #ddd !important;
 	}
 	
-	.new-list .col-sm-4:nth-child(1) {
+	.new-list .:nth-child(1) {
 		margin-top: -10px;
 	}
 	
-	.col-sm-4 {
+	. {
 		padding: 10px 0px;
 		margin: 10px auto;
 	}
@@ -1309,12 +1396,12 @@ footer {
 		padding: 0px;
 	}
 	
-	#multi-wrapper .col-sm-4 {
+	#multi-wrapper . {
 		padding: 0px;
 		margin: 30px auto;
 	}
 	
-	#multi-wrapper .col-sm-4:nth-child(3){
+	#multi-wrapper .:nth-child(3){
 		margin-bottom: 0px;
 	}
 	

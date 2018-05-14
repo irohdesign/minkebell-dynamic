@@ -31,28 +31,43 @@
 
 	<header id="site-header">
 		
-		<nav class="navbar container">
-		  	<a class="site-brand" href="<?php echo get_home_url();?>">Minkebell</a> 
-		  		
-			  	<button class="pull-right" onclick="openNav()">
+		<nav class="navbar">
+		  	<div class="container">	
+			  	<a class="site-brand" href="index.html">Minkebell</a> 
+			  		<button class="pull-right" onclick="openNav()">
 			  			<div class="burger"></div>
 			  			<div class="burger"></div>
 			  			<div class="burger"></div>
-			  	</button>
-
+			  		</button>
+			  		
 			  		<div id="mySidenav" class="sidenav">
-				  		
-				  		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-				  		
-				  		<?php 
-					  		
-					  		wp_nav_menu( array(
-						  		'theme_location'	=> 'primary',
-					  		));
-					  		
-				  		?>
-			  		</div>
-	
-	  		</nav>
+					  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+					  <div class="top-links">
+						 <?php
+							wp_nav_menu( array(
+								
+								'theme_location'	=> 'primary',
+								'container'			=> 'div',
+								'container_class'	=> 'sidenav',
+								'menu_class'		=> 'top-links'
+								
+							) );
+						?>
+					  </div>
+					  
+					  <div class="bottom-links">
+						  <a href="contact.html">Contact</a>
+						  <a href="about.html">About</a>
+					  </div>
+					</div><!-- end of sidenav -->
+			</div><!-- end of container -->
+					</nav>
+
+					
+					
+				</div><!-- container -->
+				
+			</div><!-- navbar -->
 			
+		</div><!-- navbar-wrapper -->			
 		</header><!-- header end -->
