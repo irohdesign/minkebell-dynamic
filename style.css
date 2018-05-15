@@ -514,10 +514,6 @@ header nav {
 	position: relative;
 }
 
-ul.sub-menu {
-	
-}
-
 ul.sub-menu a {
 	font-size: 18px;
 	color: #aaa;
@@ -619,6 +615,23 @@ header button {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+}
+
+/**********************************************************
+	entry-footers
+**********************************************************/
+
+.entry-footer {
+	font-family: hanken;
+	text-align: center;
+}
+
+.entry-footer .cat-links {
+	display: block;
+}
+
+.entry-footer .comments-link {
+	display: none;
 }
 
 /**********************************************************
