@@ -41,7 +41,7 @@
 			  		</button>
 			  		
 			  		<div id="mySidenav" class="sidenav">
-				  		 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				  		 <a href="javascript:void(0)" class="closebtn" id="x-button" onclick="closeNav()">&times;</a>
 				  		 
 						 <div class="top-links">
 							 <?php 
@@ -51,7 +51,7 @@
 					  
 					  <div class="bottom-links">
 						<a href="/index.php?page_id=62">About</a>
-						<a href="/index.php?page_id=91">Contact / Submissions</a>
+						<a href="/index.php?page_id=91">Contact</a>
 					  </div>
 					</div><!-- end of sidenav -->
 			</div><!-- end of container -->

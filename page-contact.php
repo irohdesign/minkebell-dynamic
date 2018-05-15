@@ -112,3 +112,8 @@ get_header(); ?>
     <script src="assets/js/bootstrap.min.js"></script>
 	</body>
 </html>
+
+
+<?php 
+	get_footer();
+?>
