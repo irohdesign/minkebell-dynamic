@@ -29,67 +29,53 @@ get_header(); ?>
 					
 					<h1>Featured <?php echo $feat_type; ?></h1><!-- make artist, album, concert or venue dynamic, so it can be more flexible in the long run -->
 					
-					<a href=""><div class="feat-img" style="background-image: url('assets/img/chancetherapper.jpeg'); background-size: cover;"></div>
-					
-					<h2><?php echo $feat_name; ?></h2><!-- artist title --></a>
-					<!-- description text -->
-					
-					<!-- make sure to leave work limit on the description, because it looks weird with too much text. maybe a limit of 150 words -->					
-					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="<?php echo $soundcloud_url;?>"></iframe>
-					
+					<?php
+  $args = array(
+        'posts_per_page' => 5,
+        'meta_key' => 'meta-checkbox',
+        'meta_value' => 'yes'
+    );
+    $featured = new WP_Query($args);
+ 
+if ($featured->have_posts()): while($featured->have_posts()): $featured->the_post(); ?>
+<h3><a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a></h3>
+<p class="details">By <a href="<?php the_author_posts() ?>"><?php the_author(); ?> </a> / On <?php echo get_the_date('F j, Y'); ?> / In <?php the_category(', '); ?></p>
+<?php if (has_post_thumbnail()) : ?>
+ 
+<figure> <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a> </figure>
+<p ><?php the_excerpt();?></p>
+<?php
+endif;
+endwhile; else:
+endif;
+?>
 					
 				</section><!-- end of featured section -->
 				
 				<section class="new-list">
 					
 					<h2 class="new-list-title">New Artists</h2>
-					
+				
 				<div class="index-inner">	
 					<div class="row">
+						<?php
+						$args = array( 
+							'posts_per_page' => 4,
+							'category'		=> 'rock',
+						);
+						$postslist = get_posts( $args );
+						foreach ($postslist as $post) :  setup_postdata($post); ?> 
 						<div class="col-sm-4 col-md-3">
 							<a href="">
-								<div class="new-img" style="background-image: url(assets/img/guitar.jpg); background-size: cover;">
-							
-							<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/325461628&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+								<div class="excerpt-thumbnail" style="background: url(<?php the_post_thumbnail_url();?>); background-size: cover;"></div> 
+
+							<br />
+							<?php the_title(); ?>   
+							<?php the_excerpt(); ?>
 								
-							</div>
-					<h3>Yebba comes out swinging</h3>
-					<p>Jermaine Lamarr Cole, better known by his stage name J. Cole, is an American hip hop recording artist and record producer.</p></a>
-						</div><!-- item end -->
-						
-						<div class="col-sm-4 col-md-3">
-							<a href="">
-								<div class="new-img" style="background-image: url(assets/img/knobs.jpeg); background-size: cover;">
-							
-							<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/325461628&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-								
-							</div>
-					<h3>J Cole is still great</h3>
-					<p>Jermaine Lamarr Cole, better known by his stage name J. Cole, is an American hip hop recording artist and record producer.</p>
-						</a></div><!-- item end -->
-						
-						<div class="col-sm-4 col-md-3">
-							<a href="">
-								<div class="new-img" style="background-image: url(assets/img/milodoldrumsband.jpg); background-size: cover;">
-							
-							<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/325461628&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-								
-							</div>
-					<h3>Yebba comes out swinging</h3>
-					<p>Jermaine Lamarr Cole, better known by his stage name J. Cole, is an American hip hop recording artist and record producer.</p>
-						</a></div><!-- item end -->
-						
-						<div class="hidden-sm col-md-3">
-							<a href="">
-								<div class="new-img" style="background-image: url(assets/img/paintingthemoon.jpg); background-size: cover;">
-							
-							<iframe scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/325461628&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-								
-							</div>
-					<h3>Yebba comes out swinging</h3>
-					<p>Jermaine Lamarr Cole, better known by his stage name J. Cole, is an American hip hop recording artist and record producer.</p>
-						</a></div><!-- item end -->
-						
+								 </div><!-- item end -->
+								  <?php endforeach; ?>
+											
 					</div><!-- row end -->
 					</div><!-- index-innner end -->
 					
