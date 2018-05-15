@@ -7,11 +7,19 @@
 $feat_type				= get_post_meta( 8, 'feat_type', true );
 $feat_name				= get_post_meta( 8, 'feat_name', true );
 $playlist_modal_url		= get_post_meta( 8, 'playlist_modal_url', true);
+$feat_soundcloud_url	= get_post_meta( 8, 'feat_soundcloud_url', true);
+
+
+$categories = get_categories();
+foreach($categories as $category) {
+
+}
 
 
 
 get_header(); ?>
-		
+
+
 
 <section id="hero" style="background: url(<?php bloginfo('stylesheet_directory');?>/assets/img/desk-turn.jpeg);
 	background-size: cover;
@@ -46,7 +54,8 @@ if ($featured->have_posts()): while($featured->have_posts()): $featured->the_pos
  <div class="featured-thumbnail" style="background:url(<?php the_post_thumbnail_url();?>); background-size: cover;"></div><!-- featured-thumbnail end -->
  <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
  <p class="details"><?php the_category(', '); ?></p>
-<p ><?php the_content(400);?></p>
+ <?php echo excerpt(400); ?>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="<?php echo $feat_soundcloud_url;?>"></iframe>
 <?php
 endif;
 endwhile; else:
@@ -64,19 +73,70 @@ endif;
 				
 				<div class="index-inner">	
 					<div class="row">
+						
+						<?php $query = new WP_Query( $args );
+ 
+if ( $query->have_posts() ) { ?>
+ 
+    <section class="<?php echo $category->name; ?> listing">
+
+ 
+        <?php while ( $query->have_posts() ) {
+ 
+            $query->the_post();
+            
+            $args = array(
+					'cat' => 'rap',
+					'post_type' => 'post',
+					'posts_per_page' => '3',
+					'post__not_in' => $do_not_duplicate
+				);
+            ?>
+			<div class="col-sm-6 col-md-3">
+							
+								<a href="<?php the_permalink();?>"><div class="excerpt-thumbnail" style="background: url(<?php the_post_thumbnail_url();?>); background-size: cover;"></div> 
+
+							<br />
+							
+							<?php the_title('<h3>', '</h3>'); ?></a> 
+							<?php echo excerpt(40); ?>
+								
+								 </div><!-- item end -->
+        <?php } // end while ?>
+ 
+    </section>
+ 
+<?php } // end if
+ 
+// Use reset to restore original query.
+wp_reset_postdata(); ?>
+													
+											</div><!-- row end -->
+					</div><!-- index-innner end -->
+					
+					
+				</section><!-- end of new-list section -->
+				
+				<section class="new-list">
+					
+					<h2 class="new-list-title">New Albums</h2>
+				
+				<div class="index-inner">	
+					<div class="row">
 						<?php
 						$args = array( 
 							'posts_per_page' => 4,
-							'category'		=> 'rock',
+							'category'		=> 'rap',
 						);
 						$postslist = get_posts( $args );
 						foreach ($postslist as $post) :  setup_postdata($post); ?> 
 						<div class="col-sm-6 col-md-3">
-							<a href="<?php the_permalink();?>"></a>
-								<div class="excerpt-thumbnail" style="background: url(<?php the_post_thumbnail_url();?>); background-size: cover;"></div> 
+							
+								<a href="<?php the_permalink();?>"><div class="excerpt-thumbnail" style="background: url(<?php the_post_thumbnail_url();?>); background-size: cover;"></div> 
 
 							<br />
-							<?php the_title(); ?>   
+							
+							<?php the_title('<h3>', '</h3>'); ?></a> 
 							<?php echo excerpt(40); ?>
 								
 								 </div><!-- item end -->
@@ -87,7 +147,8 @@ endif;
 					
 					
 				</section><!-- end of new-list section -->
-
+				
+									
 			
 		</section><!-- end of index-wrapper -->	
 		

@@ -506,10 +506,6 @@ header nav {
 	list-style: none !important;
 }
 
-.sidenav a {
-	color: red;
-}
-
 .sidenav ul {
 	position: relative;
 }
@@ -573,6 +569,7 @@ header button {
     transition: 0.3s;
     font-family: Hanken;
     font-size: 23px;
+    color: black;
 }
 
 .top-links {
@@ -964,7 +961,7 @@ textarea::placeholder {
 }
 
 .new-list .row .col-sm-6 {
-	min-height: 450px;
+	min-height: 500px;
 	margin-bottom: 20px;
 }
 
