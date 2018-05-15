@@ -14,9 +14,11 @@ $post_type		= get_post_meta( get_the_ID(), 'post_type', true);
 
 	<section id="indiv-post" class="index-inner">
 
-		<div class="feat-img" style="background-image:url('<?php echo $img_url; php?>'); background-size: cover;"></div>
+		
+		<a href="<?php the_permalink();?>"><div class="feat-img" style="background-image:url(<?php the_post_thumbnail_url();?>);); background-size: cover;"></div>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?></a>
+		
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h2 class="entry-title">', '</h2>' );
