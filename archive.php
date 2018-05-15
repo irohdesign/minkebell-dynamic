@@ -28,9 +28,22 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/excerpt', get_post_format() );
+		?>		
+		
+		<section id="indiv-post" class="index-inner">
+		<div class="row">
+			<div class="col-sm-6 col-md-4">
 
-			endwhile;
+				<?php get_template_part( 'template-parts/excerpt', get_post_format() ); ?>
+					
+		</div><!-- col-sm-6 end -->
+				
+		</section><!-- end of indiv-post section -->
+		
+</section><!-- end of page-wrapper -->
+	</div><!-- .entry-content -->
+
+			<?php endwhile;
 
 			the_posts_navigation();
 
