@@ -41,27 +41,17 @@
 			  		</button>
 			  		
 			  		<div id="mySidenav" class="sidenav">
-					  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-					  <div class="top-links">
-						 <?php
-							wp_nav_menu( array(
-								
-								'theme_location'	=> 'primary',
-								'container'			=> 'div',
-								'container_class'	=> 'sidenav',
-								'menu_class'		=> 'top-links'
-								
-							) );
-						?>
-						<?php 
+				  		 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				  		 
+						 <div class="top-links">
+							 <?php 
 							if (is_active_sidebar('custom-header-widget')) :?>
 								<div id="header-widget-area" class="chw-widget widget-area" role="complementary"><?php dynamic_sidebar('custom-header-widget');?></div>
 						<?php endif; ?>
-					  </div>
 					  
 					  <div class="bottom-links">
-						  <a href="contact.html">Contact</a>
-						  <a href="about.html">About</a>
+						<a href="/index.php?page_id=62">About</a>
+						<a href="/index.php?page_id=91">Contact / Submissions</a>
 					  </div>
 					</div><!-- end of sidenav -->
 			</div><!-- end of container -->

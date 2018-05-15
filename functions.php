@@ -126,6 +126,8 @@ function wpb_widgets_init() {
 
 add_action('widgets_init', 'wpb_widgets_init');
 
+
+
 /**
  * Enqueue scripts and styles.
  */

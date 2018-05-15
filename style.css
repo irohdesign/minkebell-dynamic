@@ -502,6 +502,19 @@ header nav {
 	margin: inherit auto;
 }
 
+.top-links ul {
+	list-style: none !important;
+}
+
+.sidenav a {
+	color: red;
+}
+
+ul.sub-menu a {
+	font-size: 18px;
+	color: #aaa;
+}
+
 .burger {
 	height: 4px;
 	background-color: black;
@@ -537,6 +550,10 @@ header button {
 	align-content: space-between;
 }
 
+.top-links {
+	padding: 10px 0px;
+}
+
 .closebtn {
 	padding-top: 10px;
 }
@@ -544,7 +561,7 @@ header button {
 .sidenav a {
     text-decoration: none;
     font-size: 25px;
-    color: #aaa;
+    
     transition: 0.3s;
     font-family: Hanken;
     font-size: 23px;
