@@ -33,7 +33,7 @@
 		
 		<nav class="navbar">
 		  	<div class="container">	
-			  	<a class="site-brand" href="index.html">Minkebell</a> 
+			  	<a class="site-brand" href="<?php echo esc_url(home_url('/'));?>">Minkebell</a> 
 			  		<button class="pull-right" onclick="openNav()">
 			  			<div class="burger"></div>
 			  			<div class="burger"></div>
@@ -53,6 +53,10 @@
 								
 							) );
 						?>
+						<?php 
+							if (is_active_sidebar('custom-header-widget')) :?>
+								<div id="header-widget-area" class="chw-widget widget-area" role="complementary"><?php dynamic_sidebar('custom-header-widget');?></div>
+						<?php endif; ?>
 					  </div>
 					  
 					  <div class="bottom-links">
