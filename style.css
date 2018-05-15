@@ -669,14 +669,7 @@ header button {
 	font-size: 2.8rem;
 }
 
-/**********************************************************
-	recent posts in categories
-**********************************************************/
 
-.excerpt-thumbnail {
-	height: 150px;
-	width: auto;
-}
 
 /**********************************************************
 	page-wrapper
@@ -698,6 +691,15 @@ header button {
 	margin: 30px auto;
 	width: 88%;
 	max-width: 1000px;
+}
+
+/**********************************************************
+	featured-post
+**********************************************************/
+
+.featured-thumbnail {
+	height: 400px;
+	display: block;
 }
 
 /**********************************************************
@@ -938,8 +940,15 @@ textarea::placeholder {
 }
 
 /**********************************************************
-	new-list
+	recent posts in categories
 **********************************************************/
+	
+
+.excerpt-thumbnail {
+	height: 300px;
+	width: auto;
+}
+
 
 .new-list-title {
 	background: black;
@@ -954,12 +963,17 @@ textarea::placeholder {
 	font-size: 55px; 
 }
 
+.new-list .row .col-sm-6 {
+	min-height: 450px;
+	margin-bottom: 20px;
+}
+
 .new-list .index-inner {
 	padding: 30px 15px;
 }
 
 .new-img {
-	height: 180px;
+	height: 300px;
 	width: 100%;
 	position: relative;
 	overflow: hidden;
@@ -1339,6 +1353,16 @@ footer {
 @media only screen and (min-width: 900px) {
 	.feat-img {
 		height: 400px;
+	}
+	
+	.excerpt-thumbnail {
+		height: 200px;
+		width: auto;
+	}
+	
+	.new-list .row .col-sm-6 {
+		min-height: 300px;
+		margin-bottom: 20px;
 	}
 	
 	.excerpt-half-img {

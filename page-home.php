@@ -8,6 +8,8 @@ $feat_type				= get_post_meta( 8, 'feat_type', true );
 $feat_name				= get_post_meta( 8, 'feat_name', true );
 $playlist_modal_url		= get_post_meta( 8, 'playlist_modal_url', true);
 
+
+
 get_header(); ?>
 		
 
@@ -38,12 +40,13 @@ get_header(); ?>
     $featured = new WP_Query($args);
  
 if ($featured->have_posts()): while($featured->have_posts()): $featured->the_post(); ?>
-<h3><a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a></h3>
-<p class="details">By <a href="<?php the_author_posts() ?>"><?php the_author(); ?> </a> / On <?php echo get_the_date('F j, Y'); ?> / In <?php the_category(', '); ?></p>
+
+
 <?php if (has_post_thumbnail()) : ?>
- 
-<figure> <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a> </figure>
-<p ><?php the_excerpt();?></p>
+ <div class="featured-thumbnail" style="background:url(<?php the_post_thumbnail_url();?>); background-size: cover;"></div><!-- featured-thumbnail end -->
+ <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+ <p class="details"><?php the_category(', '); ?></p>
+<p ><?php the_content(400);?></p>
 <?php
 endif;
 endwhile; else:
@@ -68,13 +71,13 @@ endif;
 						);
 						$postslist = get_posts( $args );
 						foreach ($postslist as $post) :  setup_postdata($post); ?> 
-						<div class="col-sm-4 col-md-3">
-							<a href="">
+						<div class="col-sm-6 col-md-3">
+							<a href="<?php the_permalink();?>"></a>
 								<div class="excerpt-thumbnail" style="background: url(<?php the_post_thumbnail_url();?>); background-size: cover;"></div> 
 
 							<br />
 							<?php the_title(); ?>   
-							<?php the_excerpt(); ?>
+							<?php echo excerpt(40); ?>
 								
 								 </div><!-- item end -->
 								  <?php endforeach; ?>
