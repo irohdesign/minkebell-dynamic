@@ -52,6 +52,9 @@ endif;
 					
 				</section><!-- end of featured section -->
 				
+				
+<!--NOTE TO SELF: FIX 4TH SECTION THAT APPEARS ON SMALL SCREENS SO IT DOESN'T DISPLAY ON SCREENS SMALLER THAN A DESKTOP -->
+				
 				<section class="new-list">
 					
 					<h2 class="new-list-title">New Artists</h2>
