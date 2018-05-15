@@ -21,7 +21,9 @@ get_header(); ?>
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-
+<section class="page-top">
+			<h1><?php single_cat_title();?></h1>
+</section><!-- page-top end -->	
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();

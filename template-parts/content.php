@@ -10,9 +10,7 @@
 $img_url		= get_post_meta( get_the_ID(), 'img_url', true);
 $post_type		= get_post_meta( get_the_ID(), 'post_type', true);
 ?>
-<section class="page-top">
-			<h1><?php echo $post_type;?></h1>
-</section><!-- page-top end -->									
+								
 
 <section class="page-wrapper">
 	
@@ -35,7 +33,7 @@ $post_type		= get_post_meta( get_the_ID(), 'post_type', true);
 
 
 		<?php
-			the_content( sprintf(
+			the_excerpt();( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
 					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'audiophile' ),
