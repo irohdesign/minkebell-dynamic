@@ -10,7 +10,9 @@
 $img_url		= get_post_meta( get_the_ID(), 'img_url', true);
 $post_type		= get_post_meta( get_the_ID(), 'post_type', true);
 ?>
-								
+<section class="page-top">
+			<h1><?php single_cat_title();?></h1>
+</section><!-- page-top end -->									
 
 <section class="page-wrapper">
 	
@@ -33,7 +35,7 @@ $post_type		= get_post_meta( get_the_ID(), 'post_type', true);
 
 
 		<?php
-			the_excerpt();( sprintf(
+			the_content( sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
 					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'audiophile' ),
@@ -52,14 +54,14 @@ $post_type		= get_post_meta( get_the_ID(), 'post_type', true);
 			) );
 		?>
 		
-		<footer class="entry-footer container">
-			<?php audiophile_entry_footer(); ?>
-		</footer><!-- .entry-footer -->
+		<footer class="entry-footer">
+		<?php audiophile_entry_footer(); ?>
+	</footer><!-- .entry-footer -->
 		
 		</section><!-- end of indiv-post section -->
 		
 </section><!-- end of page-wrapper -->
 	</div><!-- .entry-content -->
 
-
+	
 </article><!-- #post-<?php the_ID(); ?> -->
