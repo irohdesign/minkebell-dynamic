@@ -52,12 +52,14 @@ $post_type		= get_post_meta( get_the_ID(), 'post_type', true);
 			) );
 		?>
 		
+		<footer class="entry-footer container">
+			<?php audiophile_entry_footer(); ?>
+		</footer><!-- .entry-footer -->
+		
 		</section><!-- end of indiv-post section -->
 		
 </section><!-- end of page-wrapper -->
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php audiophile_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+
 </article><!-- #post-<?php the_ID(); ?> -->
