@@ -56,7 +56,7 @@ if ( post_password_required() ) {
 			</section><!-- comments end -->
 			
 		</section><!-- page-wrapper end -->
-
+		
 <div id="comments" class="comments-area">
 
 	<?php
@@ -81,7 +81,6 @@ if ( post_password_required() ) {
 			}
 			?>
 		</h2><!-- .comments-title -->
-
 		<?php the_comments_navigation(); ?>
 
 		<ol class="comment-list">
