@@ -482,7 +482,7 @@ a {
 }
 
 header {
-	margin-bottom: -20px;
+	margin-bottom: -10px;
 }
 
 .site-brand:hover {
@@ -492,14 +492,16 @@ header {
 
 header nav {
 	position: relative;
+	background: white;
 }
 
 .navbar {
 	padding: 10px 0px 5px;
 	max-width: 1450px;
 	display: block;
-	background: white;
-	margin: inherit auto;
+	background: transparent;
+	border-radius: 0px;
+	margin: 0px auto 10px;
 }
 
 .top-links ul {
@@ -508,6 +510,18 @@ header nav {
 
 .sidenav ul {
 	position: relative;
+	margin-top: 20px;
+}
+
+li.menu-item-has-children {
+	position: relative;
+	margin-top: 65px;
+}
+
+ul.sub-menu {
+	position: absolute;
+	right: 0px;
+	margin-top: 0px;
 }
 
 ul.sub-menu a {
@@ -525,7 +539,7 @@ ul.sub-menu a {
 	border-radius: 1.7px;
 	margin: 4px;
 	position: relative;
-	top: -15px;
+	top: -10px;
 	transition: 0.5s;
 }
 
@@ -546,7 +560,7 @@ header button {
     right: 0;
 	background: white;
     overflow-x: hidden;
-    padding-top: 60px;
+    padding-top: 80px;
     transition: 0.5s; 
     display: flex;
 	flex-direction: column;
@@ -558,7 +572,7 @@ header button {
 }
 
 .closebtn {
-	padding-top: 25px;
+	padding-top: 35px;
 	padding-bottom: 50px;
 	color: black !important;
 }
@@ -589,12 +603,13 @@ header button {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 88%;
 	margin: auto;
 	border-top: solid #ddd 1px;
 	border-bottom: solid #ddd 1px;
-	padding: 10px;
 	margin-bottom: 10px;
+	position: relative;
+	left: 8%;
+	width: 75%;
 }
 
 .bottom-links a {
@@ -636,7 +651,7 @@ header button {
 **********************************************************/
 
 #hero {
-	height: 500px;
+	height: 550px;
 	width: 100%;
 	display: table;
 	text-align: center;
@@ -651,7 +666,7 @@ header button {
 #hero .middle-text h1 {
 	color: white;
 	text-shadow: 4px 6px black;	
-	font-size: 6.5em;
+	font-size: 6.8em;
 	letter-spacing: 5px;
 	margin-bottom: 40px;
 	margin-top: 0px;
