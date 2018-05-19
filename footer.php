@@ -38,10 +38,8 @@
 			</section>
 			<section id="foot-nav">
 				<nav>
-					<a href="">Home</a>
-					<a href="">Contact</a>
-					<a href="">About</a>
-					<a href="">Fish</a>
+					<a href="/index.php?page_id=62">About</a>
+					<a href="/index.php?page_id=91">Contact</a>
 				</nav>
 				
 				<h4>Minkebell &copy; 2018</h4>

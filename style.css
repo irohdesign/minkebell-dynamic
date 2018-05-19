@@ -966,20 +966,28 @@ textarea::placeholder {
 }
 
 /**********************************************************
-	index-listing
+	.single-post
 **********************************************************/
 
-#index-listing .row {
+.single-post {
 	height: 350px;
 	position: relative;
 	top: 20px;
 }
 
-#index-listing img {
+.single-post a {
+	color: black;
+}
+
+.single-post a:hover {
+	text-decoration: none;
+}
+
+.single-post img {
 	height: 300px;
 }
 
-#index-listing .col-sm-7 {
+.single-post .col-sm-7 {
 	height: 300px;
 	display: flex;
 	flex-direction: column;
@@ -987,19 +995,32 @@ textarea::placeholder {
 	font-family: Varela Round;
 }
 
-#index-listing h3 {
+.single-post h3 {
 	font-family: Bebas Neue;
 	font-size: 35px;
 }
 
-.index-category ul {
+.index-category {
+	border-top: solid 1px #ddd;
+	border-bottom: solid 1px #ddd;
+	color: black;
+	padding: 10px 5px;
+}
+
+.index-category a {
+	color: black;
+}
+
+.single-post ul {
 	list-style: none;
 	padding: 0px;
 	margin: 0px;
+	width: 100%;
 }
 
-.index-category li {
+.single-post li {
 	display: inline-block;
+	padding-right: 10px;
 }
 
 /**********************************************************
@@ -1161,8 +1182,7 @@ footer {
 }
 
 #foot-nav nav {
-	width: 80%;
-	max-width: 900px;
+	max-width: 450px;
 	margin: 20px auto 25px;
 	font-size: 18px;
 	display: flex;
