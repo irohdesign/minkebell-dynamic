@@ -486,8 +486,8 @@ header {
 }
 
 .site-brand:hover {
-	text-decoration: line-through;
 	color: #51355a;
+	cursor: pointer;
 }
 
 header nav {
@@ -712,6 +712,14 @@ header button {
 .featured-thumbnail {
 	height: 400px;
 	display: block;
+}
+
+#index-feat {
+	max-width: 800px;
+	padding: 10px 30px;
+	overflow: hidden;
+	transition: 1s ease;
+	height: auto;
 }
 
 /**********************************************************
@@ -976,7 +984,7 @@ textarea::placeholder {
 }
 
 .new-list .row .col-sm-6 {
-	min-height: 500px;
+	min-height: 400px;
 	margin-bottom: 20px;
 }
 
@@ -1170,6 +1178,7 @@ footer {
 
 .modal-footer h3 {
 	margin: 5px;
+	line-height: 40px;
 }
 
 .modal-footer button {
@@ -1183,6 +1192,9 @@ footer {
 	font-family: Permanent Marker, sans-serif;
 }
 
+.modal-footer button:hover {
+	background: white;
+}
 
 /**********************************************************
 	contact page

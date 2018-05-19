@@ -53,7 +53,11 @@ if ($featured->have_posts()): while($featured->have_posts()): $featured->the_pos
  <div class="featured-thumbnail" style="background:url(<?php the_post_thumbnail_url();?>); background-size: cover;"></div><!-- featured-thumbnail end -->
  <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
  <p class="details"><?php the_category(', '); ?></p>
- <?php echo excerpt(400); ?>
+ 
+ <div id="feat-content"><?php echo the_excerpt(); ?></div>
+ 
+ 
+ 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="<?php echo $feat_soundcloud_url;?>"></iframe>
 <?php
 endif;
@@ -98,7 +102,7 @@ if ( $query->have_posts() ) { ?>
 							<br />
 							
 							<?php the_title('<h3>', '</h3>'); ?></a> 
-							<?php echo excerpt(40); ?>
+							<?php ?>
 								
 								 </div><!-- item end -->
         <?php } // end while ?>
