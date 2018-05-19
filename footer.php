@@ -13,24 +13,25 @@
 
 <?php wp_footer(); ?>
 
+
 <footer>
 			<section id="foot-social">
 				<h3>Share the music</h3>
 				
 				<div class="social-buttons">
-					<a href=""><div class="social-bubble twitter">
+					<a href="https://www.twitter.com/intent/tweet"><div class="social-bubble twitter">
 						<i class="fa fa-twitter"></i>
 					</div></a>
 					
-					<a href=""><div class="social-bubble facebook">
+					<a href="https://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>"><div class="social-bubble facebook">
 						<i class="fa fa-facebook"></i>
 					</div></a>
 					
-					<a href=""><div class="social-bubble tumblr">
+					<a href="https://www.tumblr.com/share"><div class="social-bubble tumblr">
 						<i class="fa fa-tumblr"></i>
 					</div></a>
 					
-					<a href=""><div class="social-bubble reddit">
+					<a href="https://www.reddit.com/submit?url"><div class="social-bubble reddit">
 						<i class="fa fa-reddit"></i>
 					</div></a>
 				</div>
