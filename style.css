@@ -720,6 +720,12 @@ header button {
 	overflow: hidden;
 	transition: 1s ease;
 	height: auto;
+	margin: auto;
+}
+
+#index-listing .index-inner,
+#index-listing h2 {
+	max-width: 800px;
 }
 
 /**********************************************************
@@ -966,7 +972,7 @@ textarea::placeholder {
 #index-listing .row {
 	height: 350px;
 	position: relative;
-	top: 25px;
+	top: 20px;
 }
 
 #index-listing img {
@@ -978,7 +984,12 @@ textarea::placeholder {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding-bottom: 30px;
+	font-family: Varela Round;
+}
+
+#index-listing h3 {
+	font-family: Bebas Neue;
+	font-size: 35px;
 }
 
 .index-category ul {
