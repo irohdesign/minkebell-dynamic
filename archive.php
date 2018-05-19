@@ -31,12 +31,21 @@ get_header(); ?>
 		?>		
 		
 		<section id="indiv-post" class="index-inner">
-		<div class="row">
-			<div class="col-sm-6 col-md-4">
 
-				<?php get_template_part( 'template-parts/excerpt', get_post_format() ); ?>
+				<div class="single-post row">
+					<div class="col-sm-5">
+						<?php the_post_thumbnail(); ?>
+					</div>
 					
-		</div><!-- col-sm-6 end -->
+					<div class="col-sm-7">
+						<div class="top">
+							<h3><?php the_title(); ?></h3>
+							<?php echo excerpt(100); ?>
+						</div><!-- top end -->
+						
+						<div class="index-category">Posted in:<?php the_category(); ?></div>
+					</div>
+					
 				
 		</section><!-- end of indiv-post section -->
 		
@@ -59,3 +68,4 @@ get_header(); ?>
 <?php
 get_sidebar();
 get_footer();
+?>

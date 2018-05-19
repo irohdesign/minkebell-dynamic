@@ -77,7 +77,7 @@ endif;
  
 <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 	
-				<div class="single-post row">
+				<div class="single-post row"><a href="<?php the_permalink();?>">
 					<div class="col-sm-5">
 						<?php the_post_thumbnail(); ?>
 					</div>
@@ -85,11 +85,11 @@ endif;
 					<div class="col-sm-7">
 						<div class="top">
 							<h3><?php the_title(); ?></h3>
-							<?php echo excerpt(100); ?>
+							<?php echo excerpt(80); ?>
 						</div><!-- top end -->
 						
-						<div class="index-category"><?php the_category(); ?></div>
-					</div>
+						<div class="index-category">Posted in:<?php the_category(); ?></div>
+					</div></a>
 				</div>
 				
 				
