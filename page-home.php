@@ -65,11 +65,27 @@ endwhile; else:
 endif;
 ?>
 					
-				</section><!-- end of featured section -->
-
-												
+				</section><!-- end of featured section -->									
 			
 		</section><!-- end of index-wrapper -->	
+		
+		
+		<div id="index-listing" class="page-wrapper">
+					<h2 class="new-list-title">Recent Posts</h2>
+			<div class="index-inner">
+				<div class="single-thumbnail">
+					<div class="col-sm-4">
+					<?php the_post_thumbnail(); ?></div>
+					<div class="col-sm-8">
+						<?php the_title(); ?>
+						<?php the_excerpt(); ?>
+					</div>
+				</div>
+				
+			</div><!-- index-inner end -->
+		</div><!-- index-listing end -->
+		
+		
 		
 	
 	<div class="modal fade" id="new-playlist">
