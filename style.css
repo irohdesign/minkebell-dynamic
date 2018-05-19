@@ -963,6 +963,33 @@ textarea::placeholder {
 	index-listing
 **********************************************************/
 
+#index-listing .row {
+	height: 350px;
+	position: relative;
+	top: 25px;
+}
+
+#index-listing img {
+	height: 300px;
+}
+
+#index-listing .col-sm-7 {
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-bottom: 30px;
+}
+
+.index-category ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.index-category li {
+	display: inline-block;
+}
 
 /**********************************************************
 	recent posts in categories

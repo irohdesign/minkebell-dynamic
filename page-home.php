@@ -73,12 +73,19 @@ endif;
 		<div id="index-listing" class="page-wrapper">
 					<h2 class="new-list-title">Recent Posts</h2>
 			<div class="index-inner">
-				<div class="single-thumbnail">
-					<div class="col-sm-4">
-					<?php the_post_thumbnail(); ?></div>
-					<div class="col-sm-8">
-						<?php the_title(); ?>
-						<?php the_excerpt(); ?>
+				
+				<div class="single-post row">
+					<div class="col-sm-5">
+						<?php the_post_thumbnail(); ?>
+					</div>
+					
+					<div class="col-sm-7">
+						<div class="top">
+							<h3><?php the_title(); ?></h3>
+							<?php the_excerpt(); ?>
+						</div><!-- top end -->
+						
+						<div class="index-category"><?php the_category(); ?></div>
 					</div>
 				</div>
 				
