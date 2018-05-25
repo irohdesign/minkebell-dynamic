@@ -865,13 +865,6 @@ header button {
 	margin: auto;
 }
 
-#secondary {
-	border-top: solid 1px #ddd;
-	margin-top: 30px;
-	border-bottom: solid 1px #ddd;
-	margin-bottom: 30px;
-}
-
 #secondary h3,
 #secondary h4,
 #secondary a,
@@ -962,39 +955,82 @@ header button {
 	background: black !important;
 }
 
+.nav-previous, .nav-next {
+	display: none;
+}
+
 /**********************************************************
 	comments
 **********************************************************/
 
 .comment-wrapper {
 	width: 88%;
-	margin: 10px auto;
-	padding: 10px 0px 35px;
+	margin: 10px auto 0px;
+	padding-bottom: 30px;
 }
 
-.comment-info h4 {
-	display: inline-block;
-	font-family: hanken;
-	color: #777;
-	font-size: 16px;
+.comment-wrapper h1 {
+	background: #777;
+	width: 100%;
+	max-width: 900px;
+	color: white;
+	font-family: din alternate;
+	text-transform: uppercase;
+	font-size: 50px;
+	text-align: center;
+	padding: 10px;
+	margin: auto;
 }
 
-.comment-info h4:nth-child(1) {
-	margin-right: 70px;
-	margin-left: 0px;
-}
-
-.indiv-comment:nth-child(1) {
-	margin-top: 20px;
-}
-
-.indiv-comment {
-	margin: 40px auto;
+.comment-author img {
+	height: 30px;
 }
 
 form {
 	width: 100%;
 	margin: auto;
+}
+
+.comment-meta {
+	margin-bottom: 10px;
+	position: relative;
+	padding-bottom: 10px;
+	border-bottom: solid 1px #ddd;
+}
+
+.comment-metadata {
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	top: 10px;
+}
+
+.comment-list {
+	padding: 0px;
+	max-width: 900px;
+	margin: auto;
+}
+
+.comment-list li {
+	background: white;
+	width: 100%;
+	padding: 20px;
+	margin: 40px auto;
+}
+
+.comment-meta span {
+	display: none;
+}
+
+.comment-respond {
+	max-width: 900px;
+	margin: auto;
+	display: block;
+}
+
+.avatar-32 {
+	width: 40px !important;
+	height: 40px !important;
 }
 
 input[type=text],
