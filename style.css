@@ -860,34 +860,99 @@ header button {
 	padding: 15px 10px;
 }
 
+#secondary .row {
+	max-width: 1050px;
+	margin: auto;
+}
+
+#secondary {
+	border-top: solid 1px #ddd;
+	margin-top: 30px;
+	border-bottom: solid 1px #ddd;
+	margin-bottom: 30px;
+}
+
+#secondary h3,
+#secondary h4,
+#secondary a,
+#secondary h1 {
+	font-family: din alternate;
+	text-transform: uppercase;
+	color: black;
+}
+
+#secondary h1 {
+	text-align: center;
+	font-size: 50px;
+	margin: 30px auto;
+}
+
+#secondary h3 {
+	font-size: 22px;	
+}
+
+#secondary h4 {
+	font-size: 16px;
+	margin-top: 2px;
+	margin-bottom: 15px;
+}
+
+
+#secondary ul {
+	padding: 0px !important;
+	margin: 0px !important;
+
+}
+
+#secondary ul li {
+	list-style: none;
+	text-align: left;
+	display: inline-block;
+	padding-right: 2%;
+}
+
 .sq-prev {
-	height: 170px;
+	height: 250px;
 	margin-bottom: 10px;
 	filter: grayscale() contrast(1.2);
 }
 
-#sidebar .col-md-12:hover .sq-prev {
+#side-1 img {
+	max-height: 170px !important;
+}
+
+.sq-prev:hover {
 	filter: contrast(1.2);
 }
 
-#sidebar #side-1 {
-	background: url('assets/img/knobs.jpeg');
-	background-size: cover;
+.search-box {
+	width: 400px;
+	text-align: center;
 }
 
-#sidebar #side-2 {
-	background: url('assets/img/paintingthemoon.jpg');
-	background-size: cover;
+#secondary .search-box {
+	margin: 50px auto;
 }
 
-#sidebar #side-3 {
-	background: url('assets/img/phone.jpg');
-	background-size: cover;
+.search-box h3 {
+	margin: 20px auto;
+	font-size: 25px;
 }
 
-#sidebar #side-4 {
-	background: url('assets/img/milodoldrums.jpg');
-	background-size: cover;
+.search-field,
+.search-submit {
+	width: 350px !important;
+}
+
+.search-field {
+	border: solid 1px #333;
+	border-radius: 5px;
+}
+
+.search-submit {
+	font-family: din alternate;
+	text-transform: uppercase;
+	background: black !important;
 }
 
 /**********************************************************
@@ -1496,6 +1561,11 @@ footer {
 	#multi-wrapper .col-sm-6:nth-child(odd) {
 		padding-right: 5px;
 	}
+	
+	#secondary .row .col-sm-4:nth-child(4) {
+	display: none;
+}
+
 }
 
 @media only screen and (max-width: 767px) {
