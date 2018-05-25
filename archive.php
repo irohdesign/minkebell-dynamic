@@ -34,12 +34,12 @@ get_header(); ?>
 
 				<div class="single-post row">
 					<div class="col-sm-5">
-						<?php the_post_thumbnail(); ?>
+						<a href="<?php the_permalink();?>"><?php the_post_thumbnail(); ?></a>
 					</div>
 					
 					<div class="col-sm-7">
 						<div class="top">
-							<h3><?php the_title(); ?></h3>
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 							<?php echo excerpt(100); ?>
 						</div><!-- top end -->
 						
