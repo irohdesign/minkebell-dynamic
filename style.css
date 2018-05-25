@@ -930,6 +930,13 @@ header button {
 	text-align: center;
 }
 
+.navbar .search-box {
+	margin: auto;
+	position: relative;
+	top: 100px;
+	left: 3%;
+}
+
 #secondary .search-box {
 	margin: 50px auto;
 }

@@ -49,9 +49,13 @@
 								<div id="header-widget-area" class="chw-widget widget-area" role="complementary"><?php dynamic_sidebar('custom-header-widget');?></div>
 						<?php endif; ?>
 						
-						<?php get_search_form(); ?>
+				<div class="search-box">
+					<?php get_search_form(); ?><hr>
+				</div>						
 					  
 					  <div class="bottom-links">
+
+						  
 						<a href="/index.php?page_id=62">About</a>
 						<a href="/index.php?page_id=91">Contact</a>
 					  </div>
