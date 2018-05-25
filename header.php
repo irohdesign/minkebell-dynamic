@@ -48,6 +48,8 @@
 							if (is_active_sidebar('custom-header-widget')) :?>
 								<div id="header-widget-area" class="chw-widget widget-area" role="complementary"><?php dynamic_sidebar('custom-header-widget');?></div>
 						<?php endif; ?>
+						
+						<?php get_search_form(); ?>
 					  
 					  <div class="bottom-links">
 						<a href="/index.php?page_id=62">About</a>
