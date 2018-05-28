@@ -460,8 +460,8 @@ p {
 	font-size: 15.2px;
 }
 
-a {
-	color: #721817;
+a:hover {
+	color: red;
 }
 
 .row {
@@ -479,6 +479,7 @@ a {
 	font-size: 40px;
 	letter-spacing: 3px;
 	color: black;
+	text-shadow: 1px 1px #888;
 }
 
 header {
@@ -486,7 +487,8 @@ header {
 }
 
 .site-brand:hover {
-	color: #51355a;
+	color: red;
+	text-shadow: 1px 1px black;
 	cursor: pointer;
 }
 
@@ -808,13 +810,13 @@ header button {
 #index-feat:hover h2,
 #staff-feat:hover h2,
 #indiv-post:hover h2 {
-	text-decoration: line-through;
+	text-decoration: none;
 }
 
-#index-feat:hover a,
-#staff-feat:hover a,
-#indiv-post:hover a {
-	text-decoration: none;
+#index-feat a:hover,
+#staff-feat a:hover,
+#indiv-post a:hover {
+	color: red;
 }
 
 #single-post-page {
@@ -1087,8 +1089,9 @@ textarea::placeholder {
 	color: black;
 }
 
-.single-post a:hover {
-	text-decoration: none;
+.single-post:hover h3 a {
+	text-decoration: underline;
+	color: red;
 }
 
 .single-post img {
@@ -1201,10 +1204,11 @@ textarea::placeholder {
 
 .new-list a:hover {
 	text-decoration: none;
+	color: red;
 }
 
 .new-list a:hover h3 {
-	text-decoration: line-through;
+	text-decoration: none;
 }
 
 .new-list .row {
@@ -1442,7 +1446,7 @@ footer {
 }
 
 .col-sm-6:hover h3 {
-	text-decoration: line-through;
+	text-decoration: none;
 }
 
 .excerpt-half-sum h3 {

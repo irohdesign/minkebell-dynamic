@@ -79,17 +79,17 @@ endif;
 	
 				<div class="single-post row"><a href="<?php the_permalink();?>">
 					<div class="col-sm-5">
-						<?php the_post_thumbnail(); ?>
+						<?php the_post_thumbnail(); ?></a>
 					</div>
 					
 					<div class="col-sm-7">
 						<div class="top">
-							<h3><?php the_title(); ?></h3>
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 							<?php echo excerpt(80); ?>
 						</div><!-- top end -->
 						
 						<div class="index-category">Posted in:<?php the_category(); ?></div>
-					</div></a>
+					</div>
 				</div>
 				
 				
