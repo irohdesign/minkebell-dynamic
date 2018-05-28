@@ -48,13 +48,13 @@ get_header(); ?>
  
 if ($featured->have_posts()): while($featured->have_posts()): $featured->the_post(); ?>
 
-
+<a href="<?php the_permalink();?>">
 <?php if (has_post_thumbnail()) : ?>
  <div class="featured-thumbnail" style="background:url(<?php the_post_thumbnail_url();?>); background-size: cover;"></div><!-- featured-thumbnail end -->
  <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
  <p class="details"><?php the_category(', '); ?></p>
  
- <div id="feat-content"><?php echo the_excerpt(); ?></div>
+ <div id="feat-content"><?php echo the_excerpt(); ?></div></a>
  
  
  
