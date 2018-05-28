@@ -747,8 +747,27 @@ header button {
 	padding: 40px 0px;
 	vertical-align: middle;
 	font-family: Permanent Marker;
-	font-size: 50px;
+	font-size: 60px;
 	letter-spacing: 3px;
+}
+
+.page-top h3,
+.page-top h4 {
+	max-width: 600px;
+	margin: 0px auto 20px;
+	font-family: varela round;
+}
+
+.page-top h3 {
+	font-size: 28px;
+}
+
+.page-top h4 {
+	margin-bottom: 50px;
+}
+
+.page-top strong {
+	color: yellow;
 }
 
 /**********************************************************

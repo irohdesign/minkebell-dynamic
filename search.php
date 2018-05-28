@@ -9,18 +9,20 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+
 
 		<?php
 		if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php
+				<section class="page-top">
+					<h1 class="page-title"><?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', 'audiophile' ), '<span>' . get_search_query() . '</span>' );
 				?></h1>
-			</header><!-- .page-header -->
+				</section>
 
 			<?php
 			/* Start the Loop */
