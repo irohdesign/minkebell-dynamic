@@ -68,7 +68,6 @@ endif;
 				</section><!-- end of featured section -->									
 			
 		</section><!-- end of index-wrapper -->	
-		
 		<div id="index-listing" class="page-wrapper">
 					<h2 class="new-list-title">Recent Posts</h2>
 			<div class="index-inner">
@@ -77,7 +76,7 @@ endif;
  
 <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
 	
-				<div class="single-post row"><a href="<?php the_permalink();?>">
+				<div class="preview-post row"><a href="<?php the_permalink();?>">
 					<div class="col-sm-5">
 						<?php the_post_thumbnail(); ?></a>
 					</div>
