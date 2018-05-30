@@ -10,7 +10,7 @@
  */
 
 ?>
-<!doctype html>
+
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -32,7 +32,6 @@
 	<header id="site-header">
 		
 		<nav class="navbar">
-		  	<div class="container">	
 			  	<a class="site-brand" href="<?php echo esc_url(home_url('/'));?>">Minkebell</a> 
 			  		<button class="pull-right" onclick="openNav()">
 			  			<div class="burger"></div>
@@ -60,7 +59,6 @@
 						<a href="/index.php?page_id=91">Contact</a>
 					  </div>
 					</div><!-- end of sidenav -->
-			</div><!-- end of container -->
 					</nav>
 
 					
