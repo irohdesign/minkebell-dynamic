@@ -498,8 +498,7 @@ header nav {
 }
 
 .navbar {
-	padding: 10px 0px 5px;
-	max-width: 1450px;
+	padding: 5px 5%;
 	display: block;
 	background: transparent;
 	border-radius: 0px;
@@ -574,7 +573,8 @@ header button {
 }
 
 .closebtn {
-	padding-top: 35px;
+	padding-top: 25px;
+	padding-right: 2%;
 	padding-bottom: 50px;
 	color: black !important;
 }
@@ -722,7 +722,7 @@ header button {
 	overflow: hidden;
 	transition: 1s ease;
 	height: auto;
-	margin: auto;
+	margin: 30px auto;
 }
 
 #index-listing .index-inner,
@@ -848,7 +848,7 @@ header button {
 	color: red;
 }
 
-#single-post-page {
+#preview-post-page {
 	max-width: 1250px;
 	margin: auto;
 }
@@ -872,7 +872,6 @@ header button {
 	padding: 10px 0px;
 	font-family: Bebas Neue;
 	letter-spacing: 1.5px;
-	z-index: 3;
 }
 
 .band-fb,
@@ -998,11 +997,13 @@ header button {
 	text-align: center;
 }
 
+
 .navbar .search-box {
 	margin: auto;
 	position: relative;
 	top: 100px;
-	left: 3%;
+	width: 200px;
+	left: 5%;
 }
 
 #secondary .search-box {
@@ -1057,6 +1058,12 @@ header button {
 	margin: auto;
 }
 
+#reply-title {
+	font-family: Bebas Neue;
+	font-size: 30px;
+	margin-bottom: 5px;
+}
+
 .comment-author img {
 	height: 30px;
 }
@@ -1099,33 +1106,43 @@ form {
 
 .comment-respond {
 	max-width: 900px;
-	margin: auto;
+	margin: 20px auto auto;
 	display: block;
+	position: relative;
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+	margin: 18px auto;
+}
+
+.comment-form-author label,
+.comment-form-email label,
+.comment-form-url label {
+	position: relative;
+	top: 5px;
+}
+
+.comment-form-author input,
+.comment-form-email input,
+.comment-form-url input {
+	border: solid 1px #aaa;
+	border-radius: 5px;
+	position: absolute;
+	right: 0px;
+	width: 500px;
+	padding: 3px 0px 3px 15px;
 }
 
 .avatar-32 {
-	width: 40px !important;
-	height: 40px !important;
+	display: none;
 }
 
-input[type=text],
-input[type=email],
-input[type=submit],
-textarea {
-	border-radius: 5px;
-	border: solid 1px #aaa;
-	padding: 5px 0px;
-}
-
-input[type=text] {
-	width: 30%;
-	display: inline-block;
-}
-
-input[type=email] {
-	width: 69%;
-	display: inline-block;
-	float: right;
+.comment-awaiting-moderation {
+	margin-top: 20px;
+	color: red;
+	text-align: right;
 }
 
 textarea {
@@ -1140,6 +1157,9 @@ input[type="submit"] {
 	margin-top: 10px;
 	background: #3E92CC;
 	color: white;
+	padding: 5px;
+	border-radius: 5px;
+	border: none;
 }
 
 input::placeholder,
@@ -1152,26 +1172,26 @@ textarea::placeholder {
 	.single-post
 **********************************************************/
 
-.single-post {
+.preview-post {
 	height: 350px;
 	position: relative;
 	top: 20px;
 }
 
-.single-post a {
+.preview-post a {
 	color: black;
 }
 
-.single-post:hover h3 a {
+.preview-post:hover h3 a {
 	text-decoration: underline;
 	color: red;
 }
 
-.single-post img {
+.preview-post img {
 	height: 300px;
 }
 
-.single-post .col-sm-7 {
+.preview-post .col-sm-7 {
 	height: 300px;
 	display: flex;
 	flex-direction: column;
@@ -1179,9 +1199,10 @@ textarea::placeholder {
 	font-family: Varela Round;
 }
 
-.single-post h3 {
+.preview-post h3 {
 	font-family: Bebas Neue;
 	font-size: 35px;
+	text-align: left !important;
 }
 
 .index-category {
@@ -1195,14 +1216,14 @@ textarea::placeholder {
 	color: black;
 }
 
-.single-post ul {
+.preview-post ul {
 	list-style: none;
 	padding: 0px;
 	margin: 0px;
 	width: 100%;
 }
 
-.single-post li {
+.preview-post li {
 	display: inline-block;
 	padding-right: 10px;
 }
@@ -1696,6 +1717,17 @@ footer {
 	#hero .middle-text {
 		position: relative;
 		top: -30px;
+	}
+	
+	.preview-post {
+		height: 700px;
+	}
+	
+	
+	#index-listing .col-sm-7,
+	#indiv-post .col-sm-7 {
+		text-align: left;
+		margin-top: 20px;
 	}
 	
 	.index-inner {
