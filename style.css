@@ -704,7 +704,7 @@ header button {
 	padding: 15px;
 	margin: 30px auto;
 	width: 88%;
-	max-width: 1000px;
+	max-width: 900px;
 }
 
 /**********************************************************
@@ -802,7 +802,7 @@ header button {
 }
 
 .feat-img {
-	height: 300px;
+	height: 350px;
 	max-width: 1000px;
 	margin: auto; 
 }
@@ -1571,7 +1571,7 @@ footer {
 
 @media only screen and (min-width: 900px) {
 	.feat-img {
-		height: 600px;
+		height: 400px;
 	}
 	
 	.excerpt-thumbnail {

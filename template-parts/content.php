@@ -9,16 +9,13 @@
 
 $img_url		= get_post_meta( get_the_ID(), 'img_url', true);
 $post_type		= get_post_meta( get_the_ID(), 'post_type', true);
-?>
-<section class="page-top">
-			<h1><?php single_cat_title();?></h1>
-</section><!-- page-top end -->									
+?>								
 
 <section class="page-wrapper">
 	
 	<section id="indiv-post" class="index-inner">
 
-		<div class="feat-img" style="background-image:url('<?php echo $img_url; php?>'); background-size: cover;"></div>
+		<div class="feat-img" style="background-image:url('<?php echo $img_url; php?>'); background-size: cover; background-position: center;"></div>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php
