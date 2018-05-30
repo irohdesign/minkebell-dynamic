@@ -15,8 +15,7 @@ $post_type		= get_post_meta( get_the_ID(), 'post_type', true);
 	
 	<section id="indiv-post" class="index-inner">
 
-		<div class="feat-img" style="background-image:url('<?php echo $img_url; php?>'); background-size: cover; background-position: center;"></div>
-
+		
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php
 		if ( is_singular() ) :
@@ -28,10 +27,19 @@ $post_type		= get_post_meta( get_the_ID(), 'post_type', true);
 		if ( 'post' === get_post_type() ) : ?>
 		
 		<div class="social-bar row">
-			<div class="band-fb col-sm-4">Facebook</div>
-			<div class="band-sc col-sm-4">Soundcloud</div>
-			<div class="band-yt col-sm-4">Youtube</div>
+			<div class="band-fb col-sm-4">
+					<h4>Facebook</h4>
+				</div>
+			<div class="band-sc col-sm-4">
+				<h4>Soundcloud</h4>
+			</div>
+			<div class="band-yt col-sm-4">
+				<h4>Youtube</h4>
+			</div>
 		</div>
+		
+		<div class="feat-img" style="background-image:url('<?php echo $img_url; php?>'); background-size: cover; background-position: center;"></div>
+
 		
 		<?php
 		endif; ?>

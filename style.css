@@ -803,8 +803,9 @@ header button {
 
 .feat-img {
 	height: 350px;
-	max-width: 1000px;
-	margin: auto; 
+	width: 88%;
+
+	margin: 30px auto; 
 }
 
 #index-feat h2,
@@ -826,9 +827,12 @@ header button {
 	margin: 20px auto 20px;
 }
 
-#index-feat h1, h2, h3, h4, h5, h6,
-#staff-feat h1, h2, h3, h4, h5, h6,
-#indiv-post h1, h2, h3, h4, h5, h6 {
+#indiv-post h1,
+#indiv-post h2, 
+#indiv-post h3, 
+#indiv-post h4, 
+#indiv-post h5, 
+#indiv-post h6 {
 	text-align: center;
 }
 
@@ -853,6 +857,44 @@ header button {
 	margin: 30px auto;
 	font-family: Bebas Neue;
 	font-size: 65px;
+}
+
+.social-bar {
+	width: 88%;
+	margin: auto auto 35px;
+	background: black;
+}
+
+.social-bar .col-sm-4 h4 {
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	padding: 10px 0px;
+	font-family: Bebas Neue;
+	letter-spacing: 1.5px;
+	z-index: 3;
+}
+
+.band-fb,
+.band-sc,
+.band-yt {
+	background: transparent;
+	transition: 0.5s ease;
+}
+
+.band-fb:hover {
+	background: #3B5998;
+	transition: 1s ease;
+}
+
+.band-sc:hover {
+	background: #ff7700;
+	transition: 1s ease;
+}
+
+.band-yt:hover {
+	background: #FF0000;
+	transition: 1s ease;
 }
 
 /**********************************************************
@@ -1048,7 +1090,7 @@ form {
 	background: white;
 	width: 100%;
 	padding: 20px;
-	margin: 40px auto;
+	margin: 20px auto;
 }
 
 .comment-meta span {
