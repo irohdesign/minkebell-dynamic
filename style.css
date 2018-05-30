@@ -798,7 +798,7 @@ header button {
 #indiv-post iframe {
 	max-width: 1000px;
 	display: block;
-	margin: 35px auto 5px;
+	margin: 35px auto 35px;
 }
 
 .feat-img {
@@ -822,8 +822,14 @@ header button {
 #indiv-post p {
 	width: 80%;
 	max-width: 750px;
+	line-height: 25px;
+	margin: 20px auto 20px;
+}
+
+#index-feat h1, h2, h3, h4, h5, h6,
+#staff-feat h1, h2, h3, h4, h5, h6,
+#indiv-post h1, h2, h3, h4, h5, h6 {
 	text-align: center;
-	margin: 15px auto 20px;
 }
 
 #index-feat:hover h2,
@@ -841,6 +847,12 @@ header button {
 #single-post-page {
 	max-width: 1250px;
 	margin: auto;
+}
+
+#indiv-post h1 {
+	margin: 30px auto;
+	font-family: Bebas Neue;
+	font-size: 65px;
 }
 
 /**********************************************************

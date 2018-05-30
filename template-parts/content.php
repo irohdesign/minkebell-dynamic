@@ -20,12 +20,18 @@ $post_type		= get_post_meta( get_the_ID(), 'post_type', true);
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h2 class="entry-title">', '</h2>' );
+			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) : ?>
+		
+		<div class="social-bar row">
+			<div class="band-fb col-sm-4">Facebook</div>
+			<div class="band-sc col-sm-4">Soundcloud</div>
+			<div class="band-yt col-sm-4">Youtube</div>
+		</div>
 		
 		<?php
 		endif; ?>
@@ -45,15 +51,7 @@ $post_type		= get_post_meta( get_the_ID(), 'post_type', true);
 				get_the_title()
 			) );
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'audiophile' ),
-				'after'  => '</div>',
-			) );
 		?>
-		
-		<footer class="entry-footer">
-		<?php audiophile_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 		
 		</section><!-- end of indiv-post section -->
 		
