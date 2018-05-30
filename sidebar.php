@@ -24,7 +24,8 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
 <div class="col-sm-4 col-md-3">
 
-<div class="sq-prev" style="background: url(<?php the_post_thumbnail_url(); ?>); background-size: cover;"></div>
+<a href="<?php the_permalink();?>"><div class="sq-prev" style="background: url(<?php the_post_thumbnail_url(); ?>); background-size: cover;"></div></a>
+
 <a href=<?php the_permalink(); ?>><h3><?php the_title(); ?></h3></a>
 <h4><?php the_category(); ?></h4>
 </div>
