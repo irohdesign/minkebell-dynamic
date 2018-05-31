@@ -55,8 +55,10 @@
 					  <div class="bottom-links">
 
 						  
+<!--
 						<a href="/index.php?page_id=62">About</a>
 						<a href="/index.php?page_id=91">Contact</a>
+-->
 					  </div>
 					</div><!-- end of sidenav -->
 					</nav>
