@@ -21,7 +21,7 @@ get_header(); ?>
 
 
 
-<section id="hero" style="background: url(<?php bloginfo('stylesheet_directory');?>/assets/img/desk-turn.jpeg);
+<section id="hero" style="background: url(<?php bloginfo('stylesheet_directory');?>/assets/img/desk-vinyl.jpeg);
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: left center;
@@ -66,7 +66,6 @@ endif;
 ?>
 					
 				</section><!-- end of featured section -->									
-			
 		</section><!-- end of index-wrapper -->	
 		<div id="index-listing" class="page-wrapper">
 					<h2 class="new-list-title">Recent Posts</h2>
@@ -120,8 +119,7 @@ endif;
 					<h3>Enjoyed this playlist?</h3>
 					<h5>You can download it directly to your phone and keep it!</h5>
 					
-					<h3>Want to keep up with new playlists?</h3>
-					<button>Join the group!</button>
+					<a href="/index.php?page_id=62"><h3>Want to keep up with new playlists?</h3></a>
 				</div><!-- modal-footer end -->
 			</div><!-- modal-content end -->
 		</div>

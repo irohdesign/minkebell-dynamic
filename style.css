@@ -725,6 +725,10 @@ header button {
 	margin: 30px auto;
 }
 
+#index-feat p {
+	font-family: Varela Round;
+}
+
 #index-listing .index-inner,
 #index-listing h2 {
 	max-width: 800px;
@@ -846,6 +850,11 @@ header button {
 #staff-feat a:hover,
 #indiv-post a:hover {
 	color: red;
+}
+
+#indiv-post p {
+	font-family: Varela Round;
+	font-size: 15px;
 }
 
 #preview-post-page {
@@ -1003,7 +1012,7 @@ header button {
 	position: relative;
 	top: 100px;
 	width: 200px;
-	left: 5%;
+	left: 50px;
 }
 
 #secondary .search-box {
@@ -1268,8 +1277,9 @@ textarea::placeholder {
 	overflow: hidden;
 }
 
-.new-list p {
+#index-listing .row {
 	margin-top: 5px;
+	line-height: 22px;
 }
 
 .new-list iframe {
@@ -1632,7 +1642,10 @@ footer {
 /**********************************************************
 	subscription form
 **********************************************************/
-
+#join {
+	max-width: 500px;
+	margin-top: 30px;
+}
 
 #join h2 {
 	background: black;
@@ -1649,7 +1662,8 @@ footer {
 }
 
 #join input[type="submit"] {
-	
+	background: #888;
+	font-family: Varela Round;
 }
 
 /**********************************************************
@@ -1691,6 +1705,10 @@ footer {
 	
 	#about-page {
 		min-height: 700px;
+	}
+	
+	main .preview-post img {
+		height: 350px;
 	}
 }
 
@@ -1815,4 +1833,7 @@ footer {
 		display: none;
 	}
 
+	.featured-thumbnail {
+		height: 250px;
+	}
 }  
