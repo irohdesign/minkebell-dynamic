@@ -1753,6 +1753,9 @@ footer {
 		height: 700px;
 	}
 	
+	.page-top h1 {
+		padding: 15px;
+	}
 	
 	#index-listing .col-sm-7,
 	#indiv-post .col-sm-7 {
@@ -1835,5 +1838,10 @@ footer {
 
 	.featured-thumbnail {
 		height: 250px;
+	}
+	
+	
+	#feat-content p {
+		text-align: left;
 	}
 }  

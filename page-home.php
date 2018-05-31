@@ -21,10 +21,10 @@ get_header(); ?>
 
 
 
-<section id="hero" style="background: url(<?php bloginfo('stylesheet_directory');?>/assets/img/desk-vinyl.jpeg);
+<section id="hero" style="background: url(<?php bloginfo('stylesheet_directory');?>/assets/img/laptop-desk.jpeg);
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: left center;
+	background-position: bottom center;
 	background-repeat: no-repeat;"><!-- parallax effect with dynamic background as an option -->
 			<div class="middle-text">
 				<h1>For Music Nerds</h1>
