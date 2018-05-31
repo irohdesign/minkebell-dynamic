@@ -23,7 +23,7 @@
 						<i class="fa fa-twitter"></i>
 					</div></a>
 					
-					<a href="https://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>"><div class="social-bubble facebook">
+					<a href="http://www.facebook.com/sharer/"><div class="social-bubble facebook">
 						<i class="fa fa-facebook"></i>
 					</div></a>
 					
