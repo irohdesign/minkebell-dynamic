@@ -1629,15 +1629,27 @@ footer {
 	font-size: 16px;
 }
 
-#about-text button {
+/**********************************************************
+	subscription form
+**********************************************************/
+
+
+#join h2 {
 	background: black;
 	color: white;
-	border: none;
-	font-family: hanken;
+	padding: 15px 5px;
+	text-align: center;
+	font-family: Bebas Neue;
+	font-size: 35px;
 	margin-top: 30px;
-	padding: 15px;
-	width: 350px;
-	font-size: 18px;
+}
+
+#join input[type="email"] {
+	margin-top: 15px !important;
+}
+
+#join input[type="submit"] {
+	
 }
 
 /**********************************************************
@@ -1802,6 +1814,5 @@ footer {
 	#foot-nav nav {
 		display: none;
 	}
-	
-	
+
 }  
