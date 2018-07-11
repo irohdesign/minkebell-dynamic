@@ -28,7 +28,7 @@
 <!-- 		<?php endif; ?> -->
 <!-- 	</header><!-- .entry-header -->
 
-	<div class="single-post row">
+	<div class="preview-post row">
 					<div class="col-sm-5">
 						<a href="<?php the_permalink();?>"><?php the_post_thumbnail(); ?></a>
 					</div>
